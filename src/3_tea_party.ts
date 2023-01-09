@@ -20,8 +20,22 @@ type Table = {
 };
 
 function setTheTable(): Table {
-	// 👉 FIXME ❌
-	return { seats: [] };
+	const table: Table = {
+		seats: [],
+	};
+
+	for (let i = 0; i < 3; i++) {
+		const seat: Seat = {
+			drink: {
+				type: 'Tea',
+				poured: true
+			},
+		};
+
+		table.seats.push(seat);
+	}
+
+	return table;
 }
 
 export function attendATeaParty() {
